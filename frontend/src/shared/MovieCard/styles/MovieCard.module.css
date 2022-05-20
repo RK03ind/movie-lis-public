@@ -1,6 +1,7 @@
 .movieCard {
   width: 20rem;
   max-width: 98vw;
+  height: 50rem;
   display: flex;
   flex-direction: column;
   background-color: #111;
@@ -74,7 +75,7 @@
 
 .movieCardDetails :nth-child(2) {
   display: -webkit-box;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

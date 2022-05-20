@@ -111,7 +111,6 @@ const checkMovieExists = async (req, res, next) => {
   if (list) {
     return res.json(
       list.list.some((item) => {
-        console.log(item.id.toString() === req.params.mid.toString());
         return item.id.toString() === req.params.mid.toString();
       })
     );
@@ -122,7 +121,6 @@ const deleteList = async (req, res, next) => {
   const result = await WatchList.findOne({ _id: req.params.id, uid: req.user })
     .remove()
     .exec();
-  console.log(req.params.id);
   if (result.deletedCount === 1) {
     return res.json({ message: "Deleted successfully! " });
   }

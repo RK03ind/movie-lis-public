@@ -1,18 +1,12 @@
 import axios from "axios";
 import { useInfiniteQuery } from "react-query";
 
-// import { useNavigate } from "react-router-dom";
-// import { AuthContext } from "../context/AuthContext";
-
 const useInfiniteItems = (
   url,
   isJWTTokenRequired = false,
   isBearerTokenRequired = false,
   isSearch = false
 ) => {
-  // const authCtx = useContext(AuthContext);
-  // const navigate = useNavigate();
-
   return useInfiniteQuery(
     url,
     async ({ pageParam = 1 }) => {
@@ -45,7 +39,6 @@ const useInfiniteItems = (
     {
       refetchOnWindowFocus: false,
       getNextPageParam: (lastPage, pages) => {
-        console.log(lastPage.page + 1);
         return lastPage.page + 1;
       },
     }

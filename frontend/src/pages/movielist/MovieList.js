@@ -1,19 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { HashLoader } from "react-spinners";
 import { AuthContext } from "../../context/AuthContext";
 import { DataContext } from "../../context/DataContext";
 import useGetItems from "../../hooks/useGetItems";
-import CreateList from "../../shared/CreateList/CreateList";
-import ListItem from "../../shared/ListItem/ListItem";
 import MovieCard from "../../shared/MovieCard/MovieCard";
 
 const MovieList = () => {
   const { id } = useParams();
   const authCtx = useContext(AuthContext);
   const dataCtx = useContext(DataContext);
-  const navigate = useNavigate();
   const movieListAPI = useGetItems(
     `/api/list/${id}`,
     authCtx.userData ? true : false,

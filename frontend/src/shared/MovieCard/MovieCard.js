@@ -41,9 +41,13 @@ const MovieCard = (props) => {
       {props.poster_path && (
         <div className={styles.movieCard}>
           <img
+            width={320}
+            height={320}
             src={`https://image.tmdb.org/t/p/w1280/${props.poster_path}`}
-            alt=""
+            alt="cardimage"
+            loading="lazy"
           />
+
           <div className={styles.movieCardContent}>
             <div className={styles.movieCardHeader}>
               <span>{props.original_title}</span>

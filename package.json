@@ -2,6 +2,8 @@
   "name": "movie-list",
   "version": "1.0.0",
   "scripts": {
+    "frontend": "cd ./frontend && npm start",
+    "backend": "cd ./backend && nodemon server",
     "start": "cd ./backend/ && npm install && node server.js",
     "heroku-postbuild": "cd ./frontend && npm install && npm run build"
   },
