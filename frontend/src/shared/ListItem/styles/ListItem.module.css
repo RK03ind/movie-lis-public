@@ -1,0 +1,36 @@
+.listItem {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.4em;
+  position: relative;
+  border-radius: 5px;
+  height: 12rem;
+  width: 20rem;
+  padding: 2em;
+  background-color: var(--secondary-bg-color);
+}
+.listItem :nth-child(1) {
+  font-size: 1.82em;
+  font-weight: 700;
+  color: var(--primary-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.listItem :nth-child(3) {
+  font-weight: 600;
+  color: #818181;
+}
+
+.listItem :nth-child(2) {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.listItem :nth-child(4) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

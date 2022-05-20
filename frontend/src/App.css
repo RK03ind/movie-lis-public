@@ -1,0 +1,31 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-wrapper .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  flex: 13 1;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  padding: 0em 2em;
+  padding-bottom: 4em;
+  flex: 1 1;
+  overflow-y: scroll;
+}
+
+.content-wrapper header {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: white;
+  margin-left: 2rem;
+  margin-top: 1.8rem;
+}

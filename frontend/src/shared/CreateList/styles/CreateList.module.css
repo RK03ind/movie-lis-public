@@ -1,0 +1,16 @@
+.addList {
+  display: flex;
+  height: 12rem;
+  width: 20rem;
+  background-color: var(--secondary-bg-color);
+  /* box-shadow: #111 0px 8px 14px 0; */
+}
+
+.addList:hover > svg {
+  transform: scale(1.2);
+}
+
+.addList > svg {
+  color: #818181;
+  margin: auto;
+}

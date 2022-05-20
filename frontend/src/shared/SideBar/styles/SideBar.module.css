@@ -1,0 +1,71 @@
+.sideBar {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  height: 100vh;
+  background-color: black;
+}
+
+.sideBar header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: white;
+  font-weight: 500;
+  font-size: 1.6em;
+  letter-spacing: 0.6px;
+  margin: 1em;
+  margin-bottom: 1.2em;
+}
+
+.sideBar header svg {
+  fill: var(--primary-color);
+}
+
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  gap: 1.2rem;
+  color: white;
+  margin-left: 1.6rem;
+  margin-top: 1.8em;
+}
+
+.active,
+.sidebarItem:hover {
+  color: var(--primary-color);
+}
+
+.sidebarItem svg {
+  fill: var(--primary-color);
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.4em 0.65em;
+  width: 90%;
+  gap: 0.5em;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.searchBar svg {
+  fill: var(--primary-color);
+}
+
+.searchBar input {
+  width: 80%;
+  outline: none;
+  font-family: inherit;
+  border: 0px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background-color: inherit;
+}

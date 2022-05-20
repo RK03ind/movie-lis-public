@@ -1,0 +1,54 @@
+.addToListModal {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 30rem;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  margin: auto;
+  margin-top: calc(40vh - 15rem);
+  max-width: 96vw;
+  border-radius: 5px;
+  gap: 2rem;
+  box-shadow: #111 0px 8px 14px 0;
+}
+
+.addToListModal > span {
+  font-size: 2em;
+  color: white;
+  font-weight: 600;
+  align-self: center;
+}
+
+.addToListModal > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+}
+
+.addToListModal > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4.5rem;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.addToListModal > div > div > span {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.addToListModal > div > div > svg {
+  cursor: pointer;
+  fill: #818181;
+}
+
+.addToListModal > div > div:hover {
+  transform: scale(1.005);
+}

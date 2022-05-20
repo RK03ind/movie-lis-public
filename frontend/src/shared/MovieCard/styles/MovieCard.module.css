@@ -1,0 +1,107 @@
+.movieCard {
+  width: 20rem;
+  max-width: 98vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  border-radius: 4px;
+}
+
+.movieCard:hover {
+  transition: transform 0.5s;
+  transform: scale(1.03);
+}
+
+.movieCard img {
+  border-radius: 4px;
+  height: 45%;
+  object-fit: cover;
+  object-position: top;
+  mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, black),
+    color-stop(0.35, black),
+    color-stop(0.5, black),
+    color-stop(0.65, black),
+    color-stop(0.85, rgba(0, 0, 0, 0.6)),
+    color-stop(1, transparent)
+  );
+}
+
+.movieCardContent {
+  padding: 0px 15px;
+  position: relative;
+  height: 55%;
+}
+
+.movieCardHeader {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8em;
+}
+.movieCardHeader :nth-child(1) {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 !important;
+}
+
+.movieCardHeader :nth-child(2) {
+  color: #818181;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.movieCardDetails {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.88rem;
+  gap: 0.2rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b9b9b;
+  max-height: 10.8rem;
+  overflow: hidden;
+}
+
+.movieCardDetails :first-child {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.movieCardDetails :nth-child(2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movieCardFooter {
+  display: flex;
+  flex-direction: row;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+
+.movieCardFooter svg {
+  cursor: pointer;
+  fill: var(--primary-color);
+}
+
+.movieCardFooter :nth-child(2) {
+  margin-left: auto;
+  margin-right: 1.6rem;
+}
+
+@-moz-document url-prefix() {
+  .movieCard {
+    max-height: 102vh;
+  }
+}

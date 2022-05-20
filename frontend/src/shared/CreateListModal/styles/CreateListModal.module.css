@@ -1,0 +1,50 @@
+.createListModal {
+  display: flex;
+  flex-direction: column;
+  color: #818181;
+  width: 20rem;
+  height: 15rem;
+  margin: auto;
+  margin-top: calc(40vh - 5rem);
+  max-width: 96vw;
+  padding: 1.5em;
+  border-radius: 5px;
+  gap: 1rem;
+  background-color: var(--bg-color);
+  box-shadow: #111 0px 8px 14px 0;
+}
+
+.createListModal input {
+  font-family: inherit;
+  outline: none;
+  border: 0;
+  color: white;
+  background-color: var(--secondary-bg-color);
+  font-size: 1.1rem;
+  padding: 0.65em;
+  border-radius: 5px;
+}
+
+.createListModal select {
+  font-family: inherit;
+  outline: none;
+  border: 0;
+  color: white;
+  background-color: var(--secondary-bg-color);
+  font-size: 1rem;
+  padding: 0.65em;
+  border-radius: 5px;
+}
+
+.createListModal button {
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 1em;
+  outline: none;
+  border: 0;
+  color: white;
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+  padding: 0.65em;
+  border-radius: 5px;
+}
