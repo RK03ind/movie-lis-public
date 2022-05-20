@@ -29,7 +29,7 @@ const useGetItems = (
       } else {
         const { data } = await axios.get(url, {
           headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2M2M5YTRhMGIzNmJkMDg5NzA4Mzc1OWViN2IwMTY1NCIsInN1YiI6IjYyN2MyN2MwOTRkOGE4MDA2ODFkZGVhNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fKaekGxApYTotNzX7N_Bu-m5DOLQqCNUqYWCOotCRzE`,
+            Authorization: `Bearer //TMDB Bearer Token`,
           },
         });
         return data;
