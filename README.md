@@ -13,12 +13,12 @@ Steps to run -
  4. Run `npm start` in root directory
  5. Go to `http://localhost:5000/` to run the app 
 <br/>
-Guest User Credentials - 
- <br/>
- <br/>
-  Email: ** guest@guest.com **
+
+**Guest User Credentials**
+
+ Email: guest@guest.com
  
-  Password: **guestguest**
+ Password: guestguest
 
 <br/>
 
