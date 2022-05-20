@@ -18,7 +18,7 @@ Steps to run -
 
  Email: guest@guest.com
  
- Password: guestguest
+ Password: **guestguest**
 
 <br/>
 
