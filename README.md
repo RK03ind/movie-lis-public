@@ -12,13 +12,13 @@ Steps to run -
  3. In `./frontend/hooks/` add TMDB API bearer tokens wherever required
  4. Run `npm start` in root directory
  5. Go to `http://localhost:5000/` to run the app 
-
 <br/>
 Guest User Credentials - 
  <br/>
- Email: guest@guest.com
+ <br/>
+  Email: ** guest@guest.com **
  
- Password: guestguest
+  Password: **guestguest**
 
 <br/>
 
