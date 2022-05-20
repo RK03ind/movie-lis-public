@@ -1,7 +1,6 @@
 # Movie-List
 
 Live link - https://movie-list-tmdb.herokuapp.com/
-
 Tech Stack - **MongoDB**, **ExpressJS**, **NodeJS**, **ReactJS**, **React Query**
 
 
