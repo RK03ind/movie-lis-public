@@ -16,9 +16,8 @@ Steps to run -
 <br/>
 Guest User Credentials - 
 
-Email: guest@guest.com
-
-Password: guestguest
+ Email: guest@guest.com
+ Password: guestguest
 
 <br/>
 
