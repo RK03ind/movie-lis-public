@@ -5,10 +5,11 @@ import useInfiniteItems from "../../hooks/useInfiniteItems";
 import MovieCard from "../../shared/MovieCard/MovieCard";
 import { DataContext } from "../../context/DataContext";
 import { HashLoader } from "react-spinners";
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
   const dataCtx = useContext(DataContext);
-
+  const navigate = useNavigate();
   const searchData = useInfiniteItems(
     `https://api.themoviedb.org/3/search/movie?query=${dataCtx.searchData}`,
     false,
@@ -24,11 +25,17 @@ const Search = () => {
     }
   }, [isInView]);
 
+  useEffect(() => {
+    if (searchData.isError) {
+      navigate("/");
+    }
+  }, [searchData.isError]);
+
   return (
     <>
       <HashLoader
         color="#20c997"
-        css={{ marginTop: "calc(40vh - 100px)" }}
+        css={{ marginTop: "calc(40vh - 120px)" }}
         loading={searchData.isLoading}
         size={100}
       />

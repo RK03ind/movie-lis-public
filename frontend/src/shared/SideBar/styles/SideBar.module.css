@@ -4,6 +4,7 @@
   flex-direction: column;
   width: 18rem;
   height: 100vh;
+  animation: testSlide 0.48s forwards;
   background-color: black;
 }
 
@@ -68,4 +69,35 @@
   font-size: 1.1rem;
   font-weight: 500;
   background-color: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  .sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .searchBar {
+    padding: 0em 0.5em;
+    width: 70%;
+    margin: 0 0 0 0.35em;
+  }
+  .searchBar input {
+    width: 100%;
+    font-size: 1.25em;
+  }
+  .searchBar svg {
+    display: none;
+  }
+}
+
+@keyframes testSlide {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
 }

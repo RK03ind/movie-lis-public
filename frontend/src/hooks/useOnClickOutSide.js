@@ -3,6 +3,7 @@ import { useEffect } from "react";
 const useOnClickOutside = (ref, toggler) => {
   useEffect(() => {
     const listener = (event) => {
+      event.stopPropagation();
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }

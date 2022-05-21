@@ -24,7 +24,7 @@ const Trending = () => {
     <>
       <HashLoader
         color="#20c997"
-        css={{ marginTop: "calc(40vh - 100px)" }}
+        css={{ marginTop: "calc(40vh - 120px)" }}
         loading={trendingMovies.isLoading}
         size={100}
       />

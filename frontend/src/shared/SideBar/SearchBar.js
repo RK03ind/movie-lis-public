@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDebounce } from "use-debounce";
@@ -12,18 +12,32 @@ const SearchBar = () => {
   const dataCtx = useContext(DataContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const searchInputRef = useRef();
+
+  const hideAndroidKeyboard = (event) => {
+    if (event.key === "Enter") {
+      searchInputRef.current.blur();
+      navigate("/search");
+    }
+  };
 
   useEffect(() => {
     dataCtx.setSearchData(searchData);
 
-    if (!searchData && searchData === "" && location.pathname === "/search") {
+    if (
+      (!searchData ||
+        searchData === "" ||
+        !debounceData ||
+        debounceData === "") &&
+      location.pathname === "/search"
+    ) {
       navigate(-1);
     } else if (
       location.pathname !== "/search" &&
       searchData &&
       searchData !== ""
     ) {
-      navigate("search");
+      navigate("/search");
     }
   }, [searchData]);
 
@@ -31,6 +45,8 @@ const SearchBar = () => {
     <div className={styles.searchBar}>
       <BiSearchAlt size={25} />
       <input
+        ref={searchInputRef}
+        onKeyUp={hideAndroidKeyboard}
         type="text"
         placeholder="Search Movies..."
         onChange={(e) => setDebounceData(e.target.value)}

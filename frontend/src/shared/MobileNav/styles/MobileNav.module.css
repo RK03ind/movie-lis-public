@@ -1,0 +1,17 @@
+.mobileNav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 4.5rem;
+  padding: 1.2em;
+  background-color: var(--bg-color);
+}
+
+.mobileNav svg {
+  fill: var(--primary-color);
+}
+
+.mobileNav :nth-child(3) {
+  margin-left: auto;
+}

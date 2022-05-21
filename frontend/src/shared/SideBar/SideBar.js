@@ -6,14 +6,15 @@ import { GoSignOut } from "react-icons/go";
 import { FaUser } from "react-icons/fa";
 import SearchBar from "./SearchBar";
 import { useContext } from "react";
-import { DataContext } from "../../context/DataContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
-const SideBar = () => {
+const SideBar = ({ toggler = () => {} }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const authCtx = useContext(AuthContext);
+  const is1024px = useMediaQuery("(max-width: 1024px)");
 
   const signOut = () => {
     setTimeout(() => {
@@ -21,6 +22,7 @@ const SideBar = () => {
       localStorage.setItem("user-data", null);
       navigate("/login", { replace: true });
     }, 600);
+    toggler();
   };
 
   return (
@@ -28,14 +30,18 @@ const SideBar = () => {
       <header>
         <BiCameraMovie size={40} /> MovieList
       </header>
-      <SearchBar />
+      {(!is1024px || !window.matchMedia("(max-width: 1024px)")) && (
+        <SearchBar />
+      )}
+
       <div
         className={`${styles.sidebarItem} ${
           location.pathname === "/" ? styles.active : ""
         }`}
-        onClick={() =>
-          authCtx.userData ? navigate("/") : navigate("/register")
-        }
+        onClick={() => {
+          toggler();
+          authCtx.userData ? navigate("/") : navigate("/register");
+        }}
       >
         <BiHome size={30} />
         Home
@@ -44,7 +50,10 @@ const SideBar = () => {
         className={`${styles.sidebarItem} ${
           location.pathname === "/trending" ? styles.active : ""
         }`}
-        onClick={() => navigate("/trending")}
+        onClick={() => {
+          navigate("/trending");
+          toggler();
+        }}
       >
         <AiFillFire size={30} /> Trending
       </div>
@@ -59,7 +68,10 @@ const SideBar = () => {
               ? styles.active
               : ""
           }`}
-          onClick={() => navigate("/login")}
+          onClick={() => {
+            navigate("/login");
+            toggler();
+          }}
         >
           <FaUser size={30} /> Signin/up
         </div>

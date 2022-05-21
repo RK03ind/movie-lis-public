@@ -1,6 +1,7 @@
 .main-wrapper {
   display: flex;
   flex-direction: row;
+  /* height: 100vh; */
 }
 
 .main-wrapper .content-wrapper {
@@ -17,15 +18,42 @@ main {
   justify-content: center;
   gap: 4rem;
   padding: 0em 2em;
-  padding-bottom: 4em;
+  padding-bottom: 10em;
   flex: 1 1;
   overflow-y: scroll;
 }
 
 .content-wrapper header {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 700;
   color: white;
   margin-left: 2rem;
-  margin-top: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+  .main-wrapper .content-wrapper {
+    gap: 1em;
+  }
+  .content-wrapper header {
+    margin-left: 1.8rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* managing gap between cards for better design */
+@media screen and (max-width: 1064px) and (min-width: 1024px) {
+  main {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 662px) {
+  main {
+    gap: 1rem;
+    padding: 0em 0.2em;
+  }
 }

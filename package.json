@@ -8,8 +8,5 @@
     "heroku-postbuild": "cd ./frontend && npm install && npm run build"
   },
   "author": "Rudra Konar",
-  "license": "ISC",
-  "dependencies": {
-    "react-responsive": "^9.0.0-beta.8"
-  }
+  "license": "ISC"
 }
