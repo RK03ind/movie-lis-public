@@ -4,6 +4,7 @@
   height: 50rem;
   display: flex;
   flex-direction: column;
+  align-self: flex-start; /* To prevent matching heights */
   background-color: #111;
   border-radius: 4px;
 }
@@ -86,8 +87,9 @@
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 500;
-  position: absolute;
-  bottom: 8px;
+  /* position: absolute;
+  bottom: 8px; */
+  margin-top: 2rem;
   width: 100%;
 }
 
