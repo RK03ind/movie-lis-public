@@ -58,6 +58,7 @@ const MovieCard = (props) => {
                   } else if (index <= 2) {
                     return ` ${genre[id]},`;
                   }
+                  return "";
                 })}
               </span>
             </div>
